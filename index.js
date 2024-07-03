@@ -16,7 +16,7 @@ const doTask = async (cloudClient) => {
     result.push(
         `${res1.isSign ? "已经签到过了，" : ""}签到获得${res1.netdiskBonus}M空间`
     );
-    await delay(3000); // 延迟3秒
+    await delay(5000); // 延迟5秒
 
     let index = 1;
     const buildResult = (index, res) => {
@@ -34,12 +34,12 @@ const doTask = async (cloudClient) => {
     buildResult(index, res2);
 
     index++;
-    await delay(3000); // 延迟3秒
+    await delay(5000); // 延迟5秒
     const res3 = await cloudClient.taskPhoto();
     buildResult(index, res3);
 
     index++;
-    await delay(3000); // 延迟3秒
+    await delay(5000); // 延迟5秒
     const res4 = await cloudClient.taskKJ();
     buildResult(index, res4);
 
